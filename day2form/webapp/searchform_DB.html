@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>검색</h1>
+<form action="/servlettest/search">
+	검색항목선택
+	<select name="item" multiple="multiple">
+		<option value="id">아이디</option>
+		<option value="name">이름</option>
+		<option value="phone">폰번호</option>
+		<option value="email">이메일</option>
+	</select>
+	검색어입력
+	<input type="text" name="word">
+<input type="submit" value="검색">
+</form>
+</body>
+</html>
