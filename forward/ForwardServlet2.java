@@ -1,4 +1,4 @@
-package forword;
+package forward;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

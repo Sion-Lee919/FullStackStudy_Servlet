@@ -1,4 +1,4 @@
-package forword;
+package forward;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;

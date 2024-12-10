@@ -1,4 +1,4 @@
-package forword;
+package forward;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/forwordhtml")
-public class ForwordHTMLServlet extends HttpServlet {
+@WebServlet("/forwardhtml")
+public class ForwardHTMLServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//멤버리스트 출력 조건 id=admin 이어야한다.
 		response.setContentType("text/html;charset=utf-8");
