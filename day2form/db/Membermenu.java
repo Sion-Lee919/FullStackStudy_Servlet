@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -31,7 +32,7 @@ public class Membermenu extends HttpServlet {
 		String[] menu = a.split(" ");
 		String sum = "<ul>";
 		for (int i = 0; i < menu.length; i++) {
-			sum+="<li><a href='"+url[i]+"'>"+menu[i]+"</li>";
+			sum+="<li><a href='"+url[i]+"'>"+menu[i]+"</a></li>";
 		}
 		sum+="</ul>";
 		o.println(sum);*/
@@ -56,6 +57,11 @@ public class Membermenu extends HttpServlet {
 	        }
 	        sum.append("</ul>");
 	        o.println(sum.toString());
+	        
+	        //visitservlet1 include 방문자 수 추가
+	        o.println("<hr>");
+	        RequestDispatcher rd= request.getRequestDispatcher("visit1");
+	        rd.include(request, response);
 	    }
 }
 
