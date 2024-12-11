@@ -21,7 +21,12 @@ public class LogoutSessionServlet extends HttpServlet {
 		if(session.getAttribute("sessionid") != null) {
 			result+="<h3>"+session.getAttribute("sessionid")+"회원님 로그아웃하셨습니다. 다시 로그인하셔야 정상 사용 가능합니다</h3>";
 		}
-		session.removeAttribute("sessionid");//로그아웃
+		else {
+			//이미 로그아웃 1번 했거나 브라우저 열고 아직 로그인안했거나
+			result+="<h3>이미 로그아웃 1번 했거나 브라우저 열고 아직 로그인한 적이 없습니다</h3>  ";
+		}
+		//session.removeAttribute("sessionid");//'sessionid'로그아웃
+		session.invalidate();//세션 무효화. 모든 속성 다 삭제
 		response.setContentType("text/html;chatset=utf-8");
 		PrintWriter o = response.getWriter();
 		o.println(result);
